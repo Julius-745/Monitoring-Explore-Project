@@ -1,0 +1,73 @@
+body{ 
+    background-color:rgb(40, 178, 170); 
+    font-size:16px 
+    color:#444; 
+    font-family: sans-serif; 
+   } 
+   .content{ 
+    width: 60%; 
+    margin: 80px auto; 
+   } 
+   /*header*/ 
+   header{ 
+    background-color:rgb(17, 139, 148); 
+    padding: 20px 10px; 
+    border-radius: 5px; 
+    border: 1px solid #444; 
+    margin-bottom: 10px; 
+   } 
+   header h1.judul, 
+   header h3.deskripsi{ 
+    text-align: center;  
+   } 
+     
+   /*menu navigasi*/ 
+   .menu{ 
+    background-color:rgb(10, 102, 114); 
+    border: 1px solid #444; 
+    border-radius: 8px;  
+    margin-bottom: 8px; 
+   } 
+     
+   div.menu ul { 
+    list-style:none; 
+    overflow: hidden; 
+   } 
+     
+     
+   div.menu ul li { 
+    float:left;   
+    text-transform:uppercase; 
+   }  
+   div.menu ul li a { 
+    display:block;  
+    padding:0 20px; 
+    text-decoration:none; 
+    color:#ffff; 
+    font-family: sans-serif; 
+    font-size:14px; 
+    font-weight:400; 
+    transition:all 0.3s ease-in-out; 
+   } 
+     
+   div.menu ul li a:hover, 
+   div.menu ul li a.hoverover {  
+    cursor: pointer;  
+    color:#444; 
+   } 
+     
+   div.badan{ 
+    background-color:rgb(250, 250, 250); 
+    border-radius: 5px; 
+    border: 1px solid #444; 
+    margin-bottom: 10px; 
+   } 
+     
+   div.halaman{ 
+    text-align:center; 
+    padding: 30px 20px; 
+   }
+   .box{
+       border: 4px dashed #00a2c6;
+       padding: 20px;
+   }
