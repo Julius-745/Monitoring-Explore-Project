@@ -13,5 +13,5 @@
     <link rel="stylesheet" href="css/style.css">
 	
     <link rel="shortcut icon" href="visual/logo.png">
-    <title>Gery Cat Official</title>
+    <title>Universitas Muhamadiyah Malang</title>
 </head>
