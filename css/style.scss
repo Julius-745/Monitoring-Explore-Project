@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+$primary-color : #FBFB39;
+$primary-color-hover : #E0E030;
+$black-color: #000000;
+$white-color: #FFFFFF;
+$grey-color: #F3F3F3;
+$f1-color: rgb(250, 250, 250);
+
+$primary-font : 'Roboto',
+sans-serif;
+$secondary-font : 'Open Sans',
+sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $secondary-font;
+}
+
+body,
+p {
+    font-family: $primary-font;
+}
+
+.navbar {
+    background: #0a0a0a !important;
+
+    a {
+        font-size: 16px;
+        // color: $black-color;
+    }
+}
+
+.btn-order {
+    background: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.product-card {
+
+    .card {
+        margin-top: 30px;
+
+        &:hover {
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+        }
+
+        h5,
+        p {
+            color: $black-color;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.hero {
+    margin-top: 50px;
+
+    .jumbotron {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 650px !important;
+        background-size: cover !important;
+        color: $white-color;
+        padding: auto;
+
+        .container {
+            padding-top: 150px;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.service-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    a {
+        color: $black-color;
+        text-decoration: none;
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+
+            h5 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.partner-section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+
+    .partner-card {
+        .card {
+            margin-top: 20px;
+            height: 300px auto;
+            padding: 20px 0;
+
+            &:hover {
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+            }
+
+            h5 {
+                margin-top: 30px;
+                color: $black-color;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.not-list-section {
+    background: $grey-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-page {
+    .jumbotron {
+        background-size: cover !important;
+        height: 300px;
+
+        .container {
+            margin-top: 40px;
+            color: $white-color;
+        }
+    }
+}
+
+.open-time-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.product-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+}
+
+.product-detail {
+    padding-top: 20px;
+    padding-bottom: 80px;
+
+    .product-gallery {
+        cursor: pointer;
+    }
+}
+
+.recommended-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.shop-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.cart-section {
+    background: $f1-color;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    .card {
+        .card-cart-product {
+            width: 60px;
+
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+
+    td {
+        vertical-align: middle;
+    }
+}
+
+.footer-section {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    hr {
+        width: 100%;
+        height: 1px;
+
+    }
+
+    .btn {
+        border-radius: 50px;
+    }
+
+    .copyright-text {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hidden-mobile {
+        display: none;
+    }
+
+    .hidden-desktop {
+        display: flex;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .hero {
+        .jumbotron {
+            min-height: 300px !important;
+            background-size: cover !important;
+            background-position: center center !important;
+
+            .container {
+                align-items: center !important;
+
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    .service-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .card {
+            img {
+                width: 50px;
+            }
+
+            h5 {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .partner-section {
+        .partner-card {
+            .card {
+                img {
+                    width: 80px;
+                }
+
+                h5 {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .footer-section {
+        img {
+            text-align: center;
+        }
+
+        h4,
+        p,
+        a {
+            text-align: center;
+        }
+    }
+}

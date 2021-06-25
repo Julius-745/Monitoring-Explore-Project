@@ -9,6 +9,9 @@
 	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
     <!-- menghungkan chart.js-->
     <script type="text/javascript" src="Chart.js/dist/Chart.min.js"></script>
+	<!-- firebase -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
 </head>
 <body>
 <div>
@@ -33,17 +36,59 @@
 <script>
 //deklarasi chartjs untuk membuat grafik 2d di id mychart 
 var ctx = document.getElementById('myChart').getContext('2d');
+var firebaseConfig = {
+			apiKey: "AIzaSyBylhD3Ke8qlZqvbEsRTwUs5jqyNGgBaQk",
+			authDomain: "tugasakhir-11.firebaseapp.com",
+			databaseURL: "https://tugasakhir-11-default-rtdb.firebaseio.com",
+			projectId: "tugasakhir-11",
+			storageBucket: "tugasakhir-11.appspot.com",
+			messagingSenderId: "391978971508",
+			appId: "1:391978971508:web:ced63eed313885a38dfc21",
+			measurementId: "G-CF70LWS2ER"
+		}
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		const db = firebase.database()
+		const blogRef = db.ref('ina219').on('value', handleSuccess, handleError)
+
+		function handleSuccess(items) {
+			console.log(items.val())
+			const v = parseFloat(document.getElementById('voltage').innerText = items.val()['1-set'].bus_voltagevoltage);
+			alert(v);
+			const c = parseFloat(document.getElementById('current').innerText = items.val()['1-set'].current);
+			alert(c);
+			const p = parseFloat(document.getElementById('power').innerText = items.val()['1-set'].power);
+			alert(p)
+		
+
+		}
+
+		function handleError(error) {
+			console.log(error)
+		}
+
+		funtion addData(myChart, labels, data){
+			myChart.data.datasets[0].push([0,0,0])
+			myChart.data.datasets.array.forEach(element => {
+				
+			});
+		}
 
 var myChart = new Chart(ctx, {
+
+	
+	
  //chart akan ditampilkan sebagai bar chart
     type: 'bar',
     data: {
      //membuat label chart
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Voltage', 'Current', 'Power'],
         datasets: [{
             label: '# of Votes',
             //isi chart
-            data: [12, 19, 3, 5, 2, 3],
+            data: [8, 16, 9],
             //membuat warna pada bar chart
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -74,7 +119,12 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-</script>
+	</script>
 </div>
+<div class="content">
+			<div>Bus Voltage</div><span id="voltage"></span>
+			<div>Current</div><span id="current"></span>
+			<div>Power</div><span id="power"></span>
+		</div>
 </body>
 </html>
